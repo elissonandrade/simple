@@ -18,5 +18,6 @@ void last(linked* l);
 void remo(linked* l, int pos);
 void list(linked* l);
 void clear(linked* l);
+void sort(linked* l);
 
 #endif

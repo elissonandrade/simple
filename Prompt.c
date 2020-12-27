@@ -56,6 +56,9 @@ int main(int argc, char *argv[]) {
 		if (strncmp(input, "clear\n", 6) == 0) {
 			clear(listLinked);
 		}
+		if (strncmp(input, "sort\n", 5) == 0) {
+			sort(listLinked);
+		}
 
 		if (strncmp(input, "exit\n", 5) == 0) {
 			break;

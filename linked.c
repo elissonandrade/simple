@@ -97,3 +97,40 @@ void clear(linked* l){
     }
 }
 
+item* mergeSort(item* x, item* y){
+    item* pivot = NULL;
+    if(x == NULL){
+        return y;
+    }
+    if(y == NULL){
+        return x;
+    }
+    if(x == y){
+        return x;
+    }
+    if((x->content) <= (y->content)){
+        pivot = x;
+        pivot->next = mergeSort(x->next,y);
+    }else{
+    
+        pivot = y;
+        pivot->next = mergeSort(x,y->next);
+    }
+    return pivot;
+
+}
+
+void sort(linked* l){
+    if(l->start != NULL&& l->start->next != NULL){
+        
+        item* pivot = l->start;
+        while(pivot->next != NULL){
+            pivot = pivot->next;
+        }
+        l->start = mergeSort(l->start ,pivot);
+        list(l);
+    }
+}
+
+
+
