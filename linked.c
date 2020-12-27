@@ -105,7 +105,7 @@ item* mergeSort(item* x, item* y){
     if(y == NULL){
         return x;
     }
-    if(x == y){
+    if((long)x == (long)y){
         return x;
     }
     if((x->content) <= (y->content)){
